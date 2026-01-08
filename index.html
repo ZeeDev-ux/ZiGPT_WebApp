@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIGPT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside id="sidebar">
+            <div class="sidebar-header">
+                <button onclick="resetChat()" class="new-chat-btn">
+                    <span class="material-icons-outlined">add</span> New chat
+                </button>
+            </div>
+            <div id="chatList" class="chat-history"></div>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <span class="avatar user-avatar">Z</span>
+                    <span>(Developer Zeeshan)</span>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <header class="mobile-header">
+                <button onclick="toggleSidebar()"><span class="material-icons-outlined">menu</span></button>
+                <span>ZIGPT</span>
+                <button onclick="resetChat()"><span class="material-icons-outlined">add</span></button>
+            </header>
+
+            <div id="chatWindow">
+                <div id="welcome">
+                    <h1>ZIGPT</h1>
+                    <div class="suggestions">
+                        <div class="card">Make a Script</div>
+                        <div class="card">Summarize the Notes</div>
+                        <div class="card">Act as a Teacher</div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="input-wrapper">
+                    <textarea id="userInput" rows="1" placeholder="Type Your Message..." oninput="autoGrow(this)"></textarea>
+                    <button id="sendBtn">
+                        <span class="material-icons-outlined">send</span>
+                    </button>
+                </div>
+                <p class="footer-note">ZIGPT COPYRIGHT 2026 INC</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
